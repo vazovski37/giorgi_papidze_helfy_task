@@ -1,0 +1,53 @@
+.task-filter {
+  display: inline-flex;
+  gap: 0.25rem;
+  background: var(--muted);
+  border-radius: var(--radius);
+  padding: 0.25rem;
+}
+
+.task-filter__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: none;
+  background: transparent;
+  color: var(--muted-fg);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.375rem 0.8rem;
+  border-radius: calc(var(--radius) - 2px);
+  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.task-filter__btn:hover {
+  color: var(--fg);
+}
+
+.task-filter__btn.is-active {
+  background: var(--bg);
+  color: var(--fg);
+  box-shadow: var(--shadow-sm);
+}
+
+.task-filter__count {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted-fg);
+  font-variant-numeric: tabular-nums;
+}
+
+.task-filter__btn.is-active .task-filter__count {
+  color: var(--fg);
+}
+
+@media (max-width: 600px) {
+  .task-filter {
+    display: flex;
+    width: 100%;
+  }
+  .task-filter__btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
